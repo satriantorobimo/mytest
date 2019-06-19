@@ -10,9 +10,7 @@ class ApiProvider {
   Future<DataModels> fetchDataList() async {
     final response = await client
       .get("https://private-a8e48-hcidtest.apiary-mock.com/home");
-    print(response.body.toString());
     if(response.statusCode == 200){
-      //Jika sukses parse to json
       return DataModels.fromJson(json.decode(response.body));
     }else{
       //Jika tidak sukses, throw error

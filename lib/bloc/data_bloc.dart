@@ -19,4 +19,4 @@ class DataBloc {
 
 }
 
-final bloc = DataBloc;
+final bloc = DataBloc();
